@@ -1,0 +1,19 @@
+.fa-pen:hover, .fatrash:hover{
+    color: yellow !important;
+}
+.fa-pen, .fatrash, .faplus{
+    cursor: pointer;
+}
+.faplus:hover{
+    color: orangered !important;
+}
+.main-div{
+    background-image: linear-gradient(45deg, #FF7A5A,#50E3C2);
+}
+input{
+    background-color: transparent;
+    color: black;
+}
+input::placeholder{
+    color: white !important;
+}
