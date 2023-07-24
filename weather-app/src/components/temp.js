@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./style.css";
 import WeatherCard from './weathercard';
 
+
 const Temp = () => {
   const [searchValue, setSearchValue] = useState("delhi");
 const [tempInfo, setTempInfo] = useState({});
@@ -45,20 +46,20 @@ useEffect(() => {
 
   return (
     <>
-      <div className="contain">
-        <div className="search">
+      <div className="contain flex sm:flex-row min-[300px]:flex-col mb-5 justify-between sm:mt-3">
+        
             <input type="search"
             placeholder='search...'
             autoFocus
             id='search'
-            className='searchTerm'
+            className='searchTerm w-60 h-8 p-2 text-lg outline-none text-black font-medium tracking-wide grow mr-2 rounded-md'
             value={searchValue }
             onChange={(e) => setSearchValue(e.target.value)} />
 
-            <button className='searchButton' type='button' onClick={getWeatherInfo}>
+            <button className='searchButton border-4 px-2 rounded-md border-darker bg-darkest text-white hover:bg-dark hover:text-darkest font-semibold tracking-wider text-xl' type='button' onClick={getWeatherInfo}>
                 Search
             </button>
-        </div>
+        
       </div>
       {/* card  */}
 <  WeatherCard tempInfo ={tempInfo}/>
